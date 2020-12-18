@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>dirt-grpc</name>
-	<url>https://dirt.pagefault.dev</url>
+	<url>https://github.com/segfault24/dirt-grpc</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
