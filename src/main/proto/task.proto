@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "dev.pagefault.eve.grpc";
+
+service TaskController {
+	rpc StartTask (TaskRequest) returns (TaskRequestStatus) {}
+	rpc StopTask (TaskRequest) returns (TaskRequestStatus) {}
+	rpc EnableTask (TaskRequest) returns (TaskRequestStatus) {}
+	rpc DisableTask (TaskRequest) returns (TaskRequestStatus) {}
+	rpc StatusTask (TaskRequest) returns (TaskRequestStatus) {}
+}
+
+message TaskRequest {
+	string taskname = 1;
+}
+
+message TaskRequestStatus {
+	bool success = 1;
+	string message = 2;
+}
