@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "dev.pagefault.eve.grpc";
+
+message Empty {
+}
+
+message RequestStatus {
+	bool success = 1;
+	string message = 2;
+}

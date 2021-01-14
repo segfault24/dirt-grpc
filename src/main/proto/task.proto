@@ -1,20 +1,17 @@
 syntax = "proto3";
 
+import "common.proto";
+
 option java_package = "dev.pagefault.eve.grpc";
 
 service TaskController {
-	rpc StartTask (TaskRequest) returns (TaskRequestStatus) {}
-	rpc StopTask (TaskRequest) returns (TaskRequestStatus) {}
-	rpc EnableTask (TaskRequest) returns (TaskRequestStatus) {}
-	rpc DisableTask (TaskRequest) returns (TaskRequestStatus) {}
-	rpc StatusTask (TaskRequest) returns (TaskRequestStatus) {}
+	rpc StartTask (TaskRequest) returns (RequestStatus) {}
+	rpc StopTask (TaskRequest) returns (RequestStatus) {}
+	rpc EnableTask (TaskRequest) returns (RequestStatus) {}
+	rpc DisableTask (TaskRequest) returns (RequestStatus) {}
+	rpc StatusTask (TaskRequest) returns (RequestStatus) {}
 }
 
 message TaskRequest {
 	string taskname = 1;
-}
-
-message TaskRequestStatus {
-	bool success = 1;
-	string message = 2;
 }
